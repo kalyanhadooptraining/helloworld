@@ -2,13 +2,6 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the Git repository
-                git branch: 'main', url: 'https://github.com/kalyanhadooptraining/helloworld.git'
-            }
-        }
-        
         stage('Build') {
             steps {
                 // Change directory to the subfolder 'spring'
