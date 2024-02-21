@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                // Change directory to the subfolder 'spring'
+                dir('spring') {
+                    // Run Maven build commands
+                    powershell 'mvn clean install'
+                }
+            }
+        }
+    }
+}
